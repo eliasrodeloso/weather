@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider as ReduxProvider } from 'react-redux';
+import { compose, createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import Router from '../../config/routes.config';
+import reducers from '../../core/reducers';
+
+let store;
+
+const createDevStoreWithMiddleware = compose(
+  applyMiddleware(thunk),
+  window.__REDUX_DEVTOOLS_EXTENSION__ // eslint-disable-line
+    ? window.__REDUX_DEVTOOLS_EXTENSION__() // eslint-disable-line
+    : f => f
+)(createStore);
+
+const createStoreWithMiddleware = compose(applyMiddleware(thunk))(createStore);
+
+if (process.env.NODE_ENV === 'development') {
+  store = createDevStoreWithMiddleware(reducers);
+} else {
+  store = createStoreWithMiddleware(reducers);
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ReduxProvider store={store}>
+      <Router />
+    </ReduxProvider>
   );
 }
 
