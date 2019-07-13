@@ -3,7 +3,7 @@ import environment from '../../config/constants/environment.constants';
 
 export default class WeatherService {
   static getWeatherFor(location) {
-    return axios.get(environment.FORECAST_URI, {
+    return axios.get(environment.CURRENT_URI, {
       params: {
         q: location
       }

@@ -6,8 +6,8 @@ import {
 
 const initialState = {
   location: {},
-  current: {},
-  forecast: {},
+  current: null,
+  forecast: null,
   isLoading: false,
   error: false
 };
