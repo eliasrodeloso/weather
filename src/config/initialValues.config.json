@@ -1,3 +1,263 @@
 {
-  "locations": ["Mendoza", "Buenos Aires", "Bogota", "Lima"]
+  "locations": ["Mendoza", "Buenos Aires", "Bogota", "Lima"],
+  "location": {
+    "name": "Bogota",
+    "region": "Cundinamarca",
+    "country": "Colombia",
+    "lat": 4.6,
+    "lon": -74.08,
+    "tz_id": "America/Bogota",
+    "localtime_epoch": 1563055020,
+    "localtime": "2019-07-13 16:57"
+  },
+  "current": {
+    "last_updated_epoch": 1563054012,
+    "last_updated": "2019-07-13 16:40",
+    "temp_c": 18,
+    "temp_f": 64.4,
+    "is_day": 1,
+    "condition": {
+      "text": "Overcast",
+      "icon": "//cdn.apixu.com/weather/64x64/day/122.png",
+      "code": 1009
+    },
+    "wind_mph": 8.1,
+    "wind_kph": 13,
+    "wind_degree": 130,
+    "wind_dir": "SE",
+    "pressure_mb": 1024,
+    "pressure_in": 30.7,
+    "precip_mm": 1.4,
+    "precip_in": 0.06,
+    "humidity": 52,
+    "cloud": 75,
+    "feelslike_c": 18,
+    "feelslike_f": 64.4,
+    "vis_km": 10,
+    "vis_miles": 6,
+    "uv": 4,
+    "gust_mph": 9.2,
+    "gust_kph": 14.8
+  },
+  "forecast": {
+    "forecastday": [
+      {
+        "date": "2019-07-13",
+        "date_epoch": 1562976000,
+        "day": {
+          "maxtemp_c": 19.5,
+          "maxtemp_f": 67.1,
+          "mintemp_c": 9.7,
+          "mintemp_f": 49.5,
+          "avgtemp_c": 13.8,
+          "avgtemp_f": 56.9,
+          "maxwind_mph": 3.6,
+          "maxwind_kph": 5.8,
+          "totalprecip_mm": 11,
+          "totalprecip_in": 0.43,
+          "avgvis_km": 8.9,
+          "avgvis_miles": 5,
+          "avghumidity": 82,
+          "condition": {
+            "text": "Patchy rain possible",
+            "icon": "//cdn.apixu.com/weather/64x64/day/176.png",
+            "code": 1063
+          },
+          "uv": 11
+        },
+        "astro": {
+          "sunrise": "05:51 AM",
+          "sunset": "06:13 PM",
+          "moonrise": "03:38 PM",
+          "moonset": "02:58 AM"
+        }
+      },
+      {
+        "date": "2019-07-14",
+        "date_epoch": 1563062400,
+        "day": {
+          "maxtemp_c": 16.8,
+          "maxtemp_f": 62.2,
+          "mintemp_c": 11.4,
+          "mintemp_f": 52.5,
+          "avgtemp_c": 13.5,
+          "avgtemp_f": 56.2,
+          "maxwind_mph": 4.7,
+          "maxwind_kph": 7.6,
+          "totalprecip_mm": 7.6,
+          "totalprecip_in": 0.3,
+          "avgvis_km": 9.4,
+          "avgvis_miles": 5,
+          "avghumidity": 85,
+          "condition": {
+            "text": "Patchy rain possible",
+            "icon": "//cdn.apixu.com/weather/64x64/day/176.png",
+            "code": 1063
+          },
+          "uv": 7.7
+        },
+        "astro": {
+          "sunrise": "05:51 AM",
+          "sunset": "06:13 PM",
+          "moonrise": "04:31 PM",
+          "moonset": "03:49 AM"
+        }
+      },
+      {
+        "date": "2019-07-15",
+        "date_epoch": 1563148800,
+        "day": {
+          "maxtemp_c": 18.4,
+          "maxtemp_f": 65.1,
+          "mintemp_c": 9.7,
+          "mintemp_f": 49.5,
+          "avgtemp_c": 13.5,
+          "avgtemp_f": 56.2,
+          "maxwind_mph": 3.8,
+          "maxwind_kph": 6.1,
+          "totalprecip_mm": 1.4,
+          "totalprecip_in": 0.06,
+          "avgvis_km": 9.9,
+          "avgvis_miles": 6,
+          "avghumidity": 84,
+          "condition": {
+            "text": "Heavy rain at times",
+            "icon": "//cdn.apixu.com/weather/64x64/day/305.png",
+            "code": 1192
+          },
+          "uv": 9
+        },
+        "astro": {
+          "sunrise": "05:52 AM",
+          "sunset": "06:13 PM",
+          "moonrise": "05:23 PM",
+          "moonset": "04:40 AM"
+        }
+      },
+      {
+        "date": "2019-07-16",
+        "date_epoch": 1563235200,
+        "day": {
+          "maxtemp_c": 19.1,
+          "maxtemp_f": 66.4,
+          "mintemp_c": 10,
+          "mintemp_f": 50,
+          "avgtemp_c": 13.8,
+          "avgtemp_f": 56.9,
+          "maxwind_mph": 3.8,
+          "maxwind_kph": 6.1,
+          "totalprecip_mm": 3.7,
+          "totalprecip_in": 0.15,
+          "avgvis_km": 9.4,
+          "avgvis_miles": 5,
+          "avghumidity": 81,
+          "condition": {
+            "text": "Moderate or heavy rain shower",
+            "icon": "//cdn.apixu.com/weather/64x64/day/356.png",
+            "code": 1243
+          },
+          "uv": 12.2
+        },
+        "astro": {
+          "sunrise": "05:52 AM",
+          "sunset": "06:13 PM",
+          "moonrise": "06:14 PM",
+          "moonset": "05:32 AM"
+        }
+      },
+      {
+        "date": "2019-07-17",
+        "date_epoch": 1563321600,
+        "day": {
+          "maxtemp_c": 18,
+          "maxtemp_f": 64.4,
+          "mintemp_c": 11.3,
+          "mintemp_f": 52.3,
+          "avgtemp_c": 13.9,
+          "avgtemp_f": 57,
+          "maxwind_mph": 4,
+          "maxwind_kph": 6.5,
+          "totalprecip_mm": 16,
+          "totalprecip_in": 0.63,
+          "avgvis_km": 9,
+          "avgvis_miles": 5,
+          "avghumidity": 85,
+          "condition": {
+            "text": "Patchy rain possible",
+            "icon": "//cdn.apixu.com/weather/64x64/day/176.png",
+            "code": 1063
+          },
+          "uv": 10.3
+        },
+        "astro": {
+          "sunrise": "05:52 AM",
+          "sunset": "06:13 PM",
+          "moonrise": "07:03 PM",
+          "moonset": "06:23 AM"
+        }
+      },
+      {
+        "date": "2019-07-18",
+        "date_epoch": 1563408000,
+        "day": {
+          "maxtemp_c": 19.1,
+          "maxtemp_f": 66.4,
+          "mintemp_c": 10.1,
+          "mintemp_f": 50.2,
+          "avgtemp_c": 14.1,
+          "avgtemp_f": 57.4,
+          "maxwind_mph": 5.6,
+          "maxwind_kph": 9,
+          "totalprecip_mm": 2.7,
+          "totalprecip_in": 0.11,
+          "avgvis_km": 9.5,
+          "avgvis_miles": 5,
+          "avghumidity": 80,
+          "condition": {
+            "text": "Patchy rain possible",
+            "icon": "//cdn.apixu.com/weather/64x64/day/176.png",
+            "code": 1063
+          },
+          "uv": 0.6
+        },
+        "astro": {
+          "sunrise": "05:52 AM",
+          "sunset": "06:13 PM",
+          "moonrise": "07:49 PM",
+          "moonset": "07:12 AM"
+        }
+      },
+      {
+        "date": "2019-07-19",
+        "date_epoch": 1563494400,
+        "day": {
+          "maxtemp_c": 17,
+          "maxtemp_f": 62.6,
+          "mintemp_c": 10.7,
+          "mintemp_f": 51.3,
+          "avgtemp_c": 13.4,
+          "avgtemp_f": 56,
+          "maxwind_mph": 5.1,
+          "maxwind_kph": 8.3,
+          "totalprecip_mm": 2.9,
+          "totalprecip_in": 0.11,
+          "avgvis_km": 9.9,
+          "avgvis_miles": 6,
+          "avghumidity": 84,
+          "condition": {
+            "text": "Patchy rain possible",
+            "icon": "//cdn.apixu.com/weather/64x64/day/176.png",
+            "code": 1063
+          },
+          "uv": 3
+        },
+        "astro": {
+          "sunrise": "05:52 AM",
+          "sunset": "06:13 PM",
+          "moonrise": "08:33 PM",
+          "moonset": "07:59 AM"
+        }
+      }
+    ]
+  }
 }

@@ -9,7 +9,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
-    { getCurrentWeatherFor: WeatherActions.getCurrentWeatherFor },
+    {
+      getCurrentWeatherFor: WeatherActions.getCurrentWeatherFor,
+      getWeaherFor: WeatherActions.getWeatherFor
+    },
     dispatch
   )
 });
