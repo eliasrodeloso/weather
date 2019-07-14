@@ -10,7 +10,7 @@ const Slider = ({ data, unit }) => {
   useEffect(() => {
     window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
     return () => {
-      window.removeEventListener('resize');
+      window.removeEventListener('resize', () => {});
     };
   }, []);
   const isMobile = windowWidth <= 425;
@@ -20,8 +20,16 @@ const Slider = ({ data, unit }) => {
   if (isTablet) slidesPerRow = 4;
   return (
     <SlickSlider autoplay={false} slidesPerRow={slidesPerRow} infinite={false}>
-      {data.map(forecast => (
-        <div key={forecast.date_epoch} className="Slider-container">
+      {data.map((forecast, index) => (
+        <div
+          key={forecast.date_epoch}
+          className="Slider-container"
+          role="button"
+          tabIndex={index}
+          onClick={() => {
+            console.log('click');
+          }}
+        >
           {moment(forecast.date).format('ddd.')}
           <figure>
             <img

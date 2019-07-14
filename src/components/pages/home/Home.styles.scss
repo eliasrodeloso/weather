@@ -1,6 +1,76 @@
 .Home {
+  &-container {
+    min-height: 100vh;
+    background-color: #eee;
+  }
+
   &-content {
+    padding-top: 2rem;
     max-width: 95vw;
     margin: 0 auto;
+    @media screen and (min-width: 425px) {
+      max-width: 90vw;
+    }
+  }
+
+  &-location-selector {
+    padding: 1rem;
+    font-size: 125%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px #bbb;
+
+    select {
+      margin-left: 1rem;
+      font-size: 125%;
+      border-radius: 0;
+      padding: 0.5rem;
+    }
+  }
+
+  &-content-empty {
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    /* CLOUDY */
+    .cloudy {
+      animation: cloudy 5s ease-in-out infinite;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: #ffffff 65px -15px 0 -5px, #ffffff 25px -25px, #ffffff 30px 10px, #ffffff 60px 15px 0 -10px,
+        #ffffff 85px 5px 0 -5px;
+      height: 50px;
+      width: 50px;
+      margin-left: -50px;
+    }
+    .cloudy:after {
+      animation: cloudy_shadow 5s ease-in-out infinite;
+      background: #000000;
+      border-radius: 50%;
+      content: '';
+      height: 15px;
+      width: 120px;
+      opacity: 0.2;
+      position: absolute;
+      left: 5px;
+      bottom: -60px;
+      transform: scale(1);
+    }
+    @keyframes cloudy {
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    @keyframes cloudy_shadow {
+      50% {
+        transform: translateY(20px) scale(0.7);
+        opacity: 0.05;
+      }
+    }
   }
 }

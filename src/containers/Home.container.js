@@ -11,7 +11,8 @@ const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
       getCurrentWeatherFor: WeatherActions.getCurrentWeatherFor,
-      getWeaherFor: WeatherActions.getWeatherFor
+      getWeatherFor: WeatherActions.getWeatherFor,
+      changeLocation: WeatherActions.changeSelectedLocation
     },
     dispatch
   )

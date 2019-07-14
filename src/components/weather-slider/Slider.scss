@@ -1,6 +1,45 @@
-@import './slick.scss';
+@import './_slick.scss';
 
 $slick-font-path: '../../assets/fonts/';
 $slick-loader-path: '../../assets/images/';
 
-@import './slick-theme.scss';
+@import './_slick-theme.scss';
+
+.Slider {
+  &-container {
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    figure {
+      margin: 1rem;
+      text-align: center;
+
+      img {
+        display: inline-block;
+      }
+    }
+
+    &:hover {
+      border: 2px solid rgba($color: #444444, $alpha: 0.5);
+    }
+  }
+
+  &--selected {
+    border: 1px solid #444444;
+  }
+
+  &-temp {
+    span {
+      &::after {
+        content: '.';
+        margin-left: 0.25rem;
+      }
+    }
+
+    &-max {
+      font-weight: bolder;
+      margin-right: 0.75rem;
+    }
+  }
+}
