@@ -18,7 +18,7 @@ const WeatherByCity = ({
   return (
     <div className="WeatherByCity-container">
       <div className="WeatherByCity-location WeatherByCity-block">
-        <h1>{location.name}</h1>
+        <h1 className="WeatherByCity-location-name">{location.name}</h1>
         <h3>{moment(location.localtime_epoch * 1000).format('dddd, HH:mm')}</h3>
         <h3>{current.condition.text}</h3>
       </div>

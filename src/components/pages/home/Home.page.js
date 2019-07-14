@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from '../../weather-slider/Slider';
 import WeatherByCity from '../../weather-city/WeatherByCity';
 import initialValues from '../../../config/initialValues.config.json';
+
 import './Home.styles.scss';
 
 class HomePage extends React.PureComponent {
@@ -24,7 +25,7 @@ class HomePage extends React.PureComponent {
     return (
       <div className="Home-container">
         <div className="Home-location-selector">
-          Select your preferred location
+          Select or search your preferred location
           <select
             name="citySelector"
             id="citySelector"

@@ -4,7 +4,9 @@ import SlickSlider from 'react-slick';
 import moment from 'moment';
 import './Slider.scss';
 
-const Slider = ({ data, unit }) => {
+const Slider = ({
+  data, unit, onCurrentChange, ...sliderProps
+}) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const round = number => number.toFixed(0);
   useEffect(() => {
@@ -15,21 +17,18 @@ const Slider = ({ data, unit }) => {
   }, []);
   const isMobile = windowWidth <= 425;
   const isTablet = windowWidth < 768 && windowWidth > 425;
-  let slidesPerRow = 8;
+  let slidesPerRow = 7;
   if (isMobile) slidesPerRow = 3;
   if (isTablet) slidesPerRow = 4;
   return (
-    <SlickSlider autoplay={false} slidesPerRow={slidesPerRow} infinite={false}>
-      {data.map((forecast, index) => (
-        <div
-          key={forecast.date_epoch}
-          className="Slider-container"
-          role="button"
-          tabIndex={index}
-          onClick={() => {
-            console.log('click');
-          }}
-        >
+    <SlickSlider
+      autoplay={false}
+      slidesPerRow={slidesPerRow}
+      infinite={false}
+      {...sliderProps}
+    >
+      {data.map(forecast => (
+        <div key={forecast.date_epoch} className="Slider-container">
           {moment(forecast.date).format('ddd.')}
           <figure>
             <img
