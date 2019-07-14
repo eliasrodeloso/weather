@@ -26,20 +26,15 @@ export default class WeatherActions {
 
   static getWeatherFor({ location, days }) {
     return (dispatch) => {
-      if (location !== 'none') {
-        dispatch(actionFactory(GET_WEATHER_FOR_DAYS));
-        return WeatherService.getWeatherFor(location, days)
-          .then((response) => {
-            dispatch(
-              actionFactory(GET_WEATHER_FOR_DAYS_SUCCESS, response.data)
-            );
-          })
-          .catch((error) => {
-            dispatch(actionFactory(GET_WEATHER_FOR_DAYS_FAIL, error));
-            return Promise.reject(error);
-          });
-      }
-      return Promise.reject(new Error('None is not a value'));
+      dispatch(actionFactory(GET_WEATHER_FOR_DAYS));
+      return WeatherService.getWeatherFor(location, days)
+        .then((response) => {
+          dispatch(actionFactory(GET_WEATHER_FOR_DAYS_SUCCESS, response.data));
+        })
+        .catch((error) => {
+          dispatch(actionFactory(GET_WEATHER_FOR_DAYS_FAIL, error));
+          return Promise.reject(error);
+        });
     };
   }
 

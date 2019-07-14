@@ -5,6 +5,10 @@ import initialValues from '../../../config/initialValues.config.json';
 import './Home.styles.scss';
 
 class HomePage extends React.PureComponent {
+  state = {
+    unit: 'c'
+  };
+
   changeLocation = (event) => {
     const { actions } = this.props;
     const { target } = event;
@@ -16,6 +20,7 @@ class HomePage extends React.PureComponent {
 
   render() {
     const { store } = this.props;
+    const { unit } = this.state;
     return (
       <div className="Home-container">
         <div className="Home-location-selector">
@@ -47,10 +52,12 @@ class HomePage extends React.PureComponent {
               ) : (
                 <React.Fragment>
                   <WeatherByCity
-                    current={initialValues.current}
-                    location={initialValues.location}
+                    current={store.current}
+                    location={store.location}
+                    unit={unit}
+                    onUnitChange={newUnit => this.setState({ unit: newUnit })}
                   />
-                  <Slider data={initialValues.forecast.forecastday} unit="c" />
+                  <Slider data={store.forecast.forecastday} unit={unit} />
                 </React.Fragment>
               )}
             </React.Fragment>

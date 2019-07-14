@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import moment from 'moment';
 import './WeatherByCity.scss';
 
-const WeatherByCity = ({ location, current }) => {
-  const [unit, setUnit] = useState('c');
+const WeatherByCity = ({
+  location, current, unit, onUnitChange
+}) => {
   const celciusClassName = classNames('WeatherByCity-unit-selector', {
     'WeatherByCity-unit-selector--enabled': unit === 'f',
     'WeatherByCity-unit-selector--disabled': unit === 'c'
@@ -34,14 +36,14 @@ const WeatherByCity = ({ location, current }) => {
             <div>
               <button
                 type="button"
-                onClick={() => setUnit('c')}
+                onClick={() => onUnitChange('c')}
                 className={celciusClassName}
               >
                 °C
               </button>
               <button
                 type="button"
-                onClick={() => setUnit('f')}
+                onClick={() => onUnitChange('f')}
                 className={farenheitClassName}
               >
                 °F
@@ -61,6 +63,13 @@ const WeatherByCity = ({ location, current }) => {
       </div>
     </div>
   );
+};
+
+WeatherByCity.propTypes = {
+  current: PropTypes.objectOf(PropTypes.any).isRequired,
+  location: PropTypes.objectOf(PropTypes.any).isRequired,
+  unit: PropTypes.string.isRequired,
+  onUnitChange: PropTypes.func.isRequired
 };
 
 export default WeatherByCity;
