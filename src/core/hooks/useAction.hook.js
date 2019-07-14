@@ -6,14 +6,16 @@ import { initialResponse, responseReducer, actions } from './reducer.hook';
  *
  * @param {function} action Async action to be executed
  * @param {string} query to be send in the request
- * @returns {object} results an object of
- * @returns {boolean} results.loading
- * @returns {object} results.response
+ * @param {object} query to be send in the request
+ * @returns {object} state an object of
+ * @returns {boolean} state.loading
+ * @returns {object} state.response
  * @returns {object} retults.error
  */
 function useAsyncAction(action, query) {
-  const [results, dispatch] = useReducer(responseReducer, initialResponse);
+  const [state, dispatch] = useReducer(responseReducer, initialResponse);
   useEffect(() => {
+    if (!query) return;
     dispatch({ type: actions.start });
     action(query)
       .then((response) => {
@@ -21,7 +23,7 @@ function useAsyncAction(action, query) {
       })
       .catch(error => dispatch({ type: actions.fail, payload: error }));
   }, [action, query]);
-  return results;
+  return state;
 }
 
 export default useAsyncAction;
